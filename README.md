@@ -8,6 +8,7 @@ It's like Bootstrap's breakpoints...but for Javascript! jQuery or any other exte
 import Breakpoints from './breakpoints.js';
 
 // List your breakpoints here. If left blank, default ones will be used.
+// Just like Bootstrap, the first breakpoint must always be 0 otherwise it won't work as expected.
 let breakpoints = new Breakpoints([
 	[	'xs',	0	],
 	[	'sm',	480	],
