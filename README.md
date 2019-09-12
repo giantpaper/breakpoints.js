@@ -4,7 +4,8 @@ It's like Bootstrap's breakpoints...but for Javascript! jQuery or any other exte
 
 ## Usage
 
-`import Breakpoints from '../breakpoints.js';
+```
+import Breakpoints from '../breakpoints.js';
 
 // List your breakpoints here. If left blank, default ones will be used.
 let breakpoints = new Breakpoints([
@@ -27,4 +28,5 @@ breakpoints.gte('x4') // true if the current breakpoint is greater than or equal
 
 breakpoints.lte('x4') // true if the current breakpoint is lesser than or equal to x4
 
-breakpoints.between('md', 'x4') // true if the current breakpoint is between md and x4`
+breakpoints.between('md', 'x4') // true if the current breakpoint is between md and x4
+```
