@@ -1,0 +1,22 @@
+{
+  "name": "@giantpaper/breakpoints.js",
+  "version": "1.0.2",
+  "description": "Breakpoints for Javascript!",
+  "main": "breakpoints.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/giantpaper/breakpoints.js.git"
+  },
+  "keywords": [
+    "breakpoints"
+  ],
+  "author": "giantpaper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giantpaper/breakpoints.js/issues"
+  },
+  "homepage": "https://github.com/giantpaper/breakpoints.js#readme"
+}
