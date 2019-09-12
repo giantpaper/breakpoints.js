@@ -15,7 +15,7 @@ export default class Breakpoints {
 		];
 		this.b = {};
 		this.n = {};
-		this.w = window.innerWidth;
+		this.w = 0;
 		
 		let setValues = () => {
 			this.w = window.innerWidth;
@@ -33,12 +33,13 @@ export default class Breakpoints {
 					this.b[label] = res <= w;
 				}
 			});
+			console.log(this.w);
 		};
 		
 		setValues();
-		window.onresize = setValues;
+		window.addEventListener('resize', setValues);
 	}
-
+	
 	getKeyByValue(object, value) {
 	  return Object.keys(object).find(key => object[key] === value);
 	}
