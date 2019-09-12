@@ -5,7 +5,7 @@ It's like Bootstrap's breakpoints...but for Javascript! jQuery or any other exte
 ## Usage
 
 ```
-import Breakpoints from '../breakpoints.js';
+import Breakpoints from './breakpoints.js';
 
 // List your breakpoints here. If left blank, default ones will be used.
 let breakpoints = new Breakpoints([
