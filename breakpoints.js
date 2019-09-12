@@ -13,11 +13,12 @@ export default class Breakpoints {
 			[	'x4',	1920	],
 			[	'x5',	2560	],
 		];
+		this.b = {};
+		this.n = {};
+		this.w = window.innerWidth;
 		
 		let setValues = () => {
 			this.w = window.innerWidth;
-			this.b = {};
-			this.n = {};
 			this.config.forEach((v, k, a) => {
 				let res = v[1];
 				let label = v[0];
@@ -34,7 +35,7 @@ export default class Breakpoints {
 			});
 		};
 		
-		window.onload = setValues;
+		setValues();
 		window.onresize = setValues;
 	}
 
