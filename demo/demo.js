@@ -7,27 +7,32 @@ import Breakpoints from '../breakpoints.js';
 	/*
 	 * Create instance & list your breakpoints here
 	 */
-	let breakpoints = new Breakpoints([
-			[	'xs',	0	],
-			[	'sm',	480	],
-			[	'md',	768	],
-			[	'lg',	1024	],
-			[	'xl',	1280	],
-			[	'x2',	1440	],
-			[	'x3',	1690	],
-			[	'x4',	1920	],
-			[	'x5',	2560	],
-		]);
+	let breakpoints = new Breakpoints();
 		
 	$(document).ready(function(){
 		let runcode = function(){
 			/*
 			 * METHODS
 			 * 
+			 * // Returns the breakpoint label
+			 * .get()
+			 * 
+			 * Returns true or false
+			 * 
 			 * .between()
 			 * @param (str) breakpoint1
 			 * @param (str) breakpoint2
+			 *
+			 * .is()
+			 * @param (str) breakpoint
+			 *
+			 * .gte()
+			 * @param (str) breakpoint
+			 *
+			 * .lte()
+			 * @param (str) breakpoint
 			 */
+			$('.get').html(breakpoints.get());
 			$('.is').html(breakpoints.is('x3') || 'false');
 			$('.lte').html(breakpoints.lte('x3') || 'false');
 			$('.gte').html(breakpoints.gte('x3') || 'false');

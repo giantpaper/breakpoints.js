@@ -3,6 +3,7 @@
 	<head>
 		<title></title>
 		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="main.css">
 	</head>
 	<body>
@@ -30,6 +31,9 @@ var breakpoint = new Breakpoints([
 ]);
 
 // Resize your browser window to test!
+
+// get current breakpoint
+breakpoint.get() === <code class="get"></code>
 
 // if current breakpoint is xlarge 3
 breakpoint.is('x3') === <code class="is"></code>

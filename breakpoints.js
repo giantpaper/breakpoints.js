@@ -1,5 +1,7 @@
 export default class Breakpoints {
 	constructor(config) {
+		
+		// If no custom breakpoints are set, use these defaults
 		this.config = config || [
 			[	'xs',	0	],
 			[	'sm',	480	],
@@ -17,13 +19,13 @@ export default class Breakpoints {
 			this.b = {};
 			this.n = {};
 			this.config.forEach((v, k, a) => {
-				let next = a[k+1];
 				let res = v[1];
 				let label = v[0];
 				let w = this.w;
-				if (next !== undefined) {
+				if (a[k+1] !== undefined) {
+					let next = a[k+1][1];
 					this.n[label] = res;
-					this.b[label] = res <= w && w < next[1];
+					this.b[label] = res <= w && w < next;
 				}
 				else {
 					this.n[label] = res;
@@ -35,15 +37,22 @@ export default class Breakpoints {
 		window.onload = setValues;
 		window.onresize = setValues;
 	}
+
+	getKeyByValue(object, value) {
+	  return Object.keys(object).find(key => object[key] === value);
+	}
 	
 	lte(test) {
 		return this.w <= this.n[test];
 	}
+	gte(test) {
+		return this.w >= this.n[test];
+	}
 	is(test) {
 		return this.b[test];
 	}
-	gte(test) {
-		return this.w >= this.n[test];
+	get() {
+		return this.getKeyByValue(this.b, true);
 	}
 	between(test, test2) {
 		return this.n[test] <= this.w && this.w <= this.n[test2];
