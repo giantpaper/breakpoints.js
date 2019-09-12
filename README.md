@@ -1,6 +1,6 @@
 # breakpoints.js
 
-It's like Bootstrap's breakpoints...but for Javascript! jQuery or any other external libraries are not needed.
+It's like Bootstrap's breakpoints...but for Javascript! jQuery or any other external libraries are not required for this work.
 
 ## Usage
 
