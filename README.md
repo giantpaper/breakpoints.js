@@ -2,6 +2,16 @@
 
 It's like Bootstrap's breakpoints...but for Javascript! jQuery or any other external libraries are not required for this work.
 
+## Installation
+
+With npm
+
+		npm install @giantpaper/breakpoints.js
+		
+With unpkg
+
+		<script type="text/javascript" src="https://unpkg.com/@giantpaper/breakpoints.js@1.0.5/breakpoints.min.js"></script>
+
 ## Usage
 
 ```
@@ -9,17 +19,17 @@ import Breakpoints from './breakpoints.js';
 
 // List your breakpoints here. If left blank, default ones will be used.
 // Just like Bootstrap, the first breakpoint must always be 0 otherwise it won't work as expected.
-let breakpoints = new Breakpoints([
-	[	'xs',	0	],
-	[	'sm',	480	],
-	[	'md',	768	],
-	[	'lg',	1024	],
-	[	'xl',	1280	],
-	[	'x2',	1440	],
-	[	'x3',	1690	],
-	[	'x4',	1920	],
-	[	'x5',	2560	],
-]);
+	let breakpoints = new Breakpoints([
+		[	'xs',	0	],
+		[	'sm',	480	],
+		[	'md',	768	],
+		[	'lg',	1024	],
+		[	'xl',	1280	],
+		[	'x2',	1440	],
+		[	'x3',	1690	],
+		[	'x4',	1920	],
+		[	'x5',	2560	],
+	]);
 
 breakpoints.get() // returns current breakpoint
 
