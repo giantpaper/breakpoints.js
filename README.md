@@ -1,7 +1,7 @@
 # breakpoints.js
 
-[![v1.0.5 on npm](https://img.shields.io/badge/npm-v1.0.5-red)](https://www.npmjs.com/package/@giantpaper/breakpoints.js)
-[![v1.0.5 on unpkg](https://img.shields.io/badge/unpkg-v1.0.5-pink)](https://unpkg.com/@giantpaper/breakpoints.js@1.0.5/breakpoints.min.js)
+[![v2.0.0 on npm](https://img.shields.io/badge/npm-v2.0.0-red)](https://www.npmjs.com/package/@giantpaper/breakpoints.js)
+[![v2.0.0 on unpkg](https://img.shields.io/badge/unpkg-v2.0.0-pink)](https://unpkg.com/@giantpaper/breakpoints.js@2.0.0/breakpoints.js)
 
 It's like Bootstrap's breakpoints...but for Javascript! Lightweight and smol. jQuery or any other external libraries are not required for this work.
 
