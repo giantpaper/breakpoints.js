@@ -1,4 +1,4 @@
-class Breakpoints {
+export default class Breakpoints {
 	constructor(config) {
 		
 		// If no custom breakpoints are set, use these defaults
@@ -33,11 +33,11 @@ class Breakpoints {
 					this.b[label] = res <= w;
 				}
 			});
-			console.log(this.w);
 		};
 		
 		setValues();
-		window.addEventListener('resize', setValues);
+		window.onresize = setValues;
+		//window.addEventListener('resize', setValues);
 	}
 	
 	getKeyByValue(object, value) {
@@ -60,5 +60,3 @@ class Breakpoints {
 		return this.n[test] <= this.w && this.w <= this.n[test2];
 	}
 }
-
-module.exports = Breakpoints;
