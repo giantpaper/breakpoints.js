@@ -16,7 +16,7 @@ npm install @giantpaper/breakpoints.js
 With unpkg
 
 ```
-<script type="text/javascript" src="https://unpkg.com/@giantpaper/breakpoints.js@1.0.5/breakpoints.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@giantpaper/breakpoints.js@2.0.0/breakpoints.min.js"></script>
 ```
 
 ## Usage
