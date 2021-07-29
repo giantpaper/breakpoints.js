@@ -8,4 +8,4 @@ let run = () => {
 };
 
 window.onload = run;
-//window.onresize = run;
+window.onresize = run;
