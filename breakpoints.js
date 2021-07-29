@@ -16,8 +16,6 @@ export default class Breakpoints {
 		this.b = {};
 		this.n = {};
 		this.w = 0;
-		//window.onresize = setValues;
-		//window.addEventListener('resize', setValues);
 	}
 	
 	setValues() {
