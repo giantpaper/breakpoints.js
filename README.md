@@ -48,3 +48,42 @@ breakpoints.lte('x4') // true if the current breakpoint is lesser than or equal 
 
 breakpoints.between('md', 'x4') // true if the current breakpoint is between md and x4
 ```
+
+## Important
+
+breakpoints.js doesn't automatically update the breakpoint on window resize. So if this is important to you, you might actually want to do something like this instead:
+
+(With Vanilla JS)
+```
+import Breakpoints from './breakpoints.js';
+
+let breakpoints = new Breakpoints;
+
+var run = function() {
+	// insert your code here, ex:
+	if (breakpoints.gte('xl')) {
+		// do desktop-related code here
+	}
+};
+
+window.onload = run;
+window.onresize = run;
+```
+
+(With jQuery)
+```
+import Breakpoints from './breakpoints.js';
+
+let breakpoints = new Breakpoints;
+
+var run = function() {
+	// insert your code here, ex:
+	if (breakpoints.gte('xl')) {
+		// do desktop-related code here
+	}
+};
+
+$(window)
+	.on('load', run)
+	.on('resize', run);
+```
