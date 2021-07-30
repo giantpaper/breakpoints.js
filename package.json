@@ -1,6 +1,6 @@
 {
   "name": "@giantpaper/breakpoints.js",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Breakpoints for Javascript!",
   "main": "breakpoints.js",
   "scripts": {
