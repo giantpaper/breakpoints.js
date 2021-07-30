@@ -21,8 +21,8 @@ export default class Breakpoints {
 	setValues() {
 		this.w = window.innerWidth;
 		this.config.forEach((v, k, a) => {
-			let res = v[1];
 			let label = v[0];
+			let res = v[1];
 			let w = this.w;
 			if (a[k+1] !== undefined) {
 				let next = a[k+1][1];
@@ -42,7 +42,7 @@ export default class Breakpoints {
 	
 	lte(test) {
 		this.setValues();
-		return this.w <= this.n[test];
+		return this.w <= this.n[test] || this.is(test);
 	}
 	gte(test) {
 		this.setValues();

@@ -1,5 +1,6 @@
 # breakpoints.js
 
+[![latest release on github](https://badgen.net/github/release/giantpaper/breakpoints.js)](https://github.com/giantpaper/breakpoints.js)
 [![v2.0.0 on npm](https://img.shields.io/badge/npm-v2.0.0-red)](https://www.npmjs.com/package/@giantpaper/breakpoints.js)
 [![v2.0.0 on unpkg](https://img.shields.io/badge/unpkg-v2.0.0-pink)](https://unpkg.com/@giantpaper/breakpoints.js@2.0.0/breakpoints.js)
 
