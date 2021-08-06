@@ -1,6 +1,6 @@
 {
   "name": "@giantpaper/breakpoints.js",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Breakpoints for Javascript!",
   "main": "breakpoints.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "url": "git://github.com/giantpaper/breakpoints.js.git"
   },
   "keywords": [
-    "breakpoints"
+    "breakpoints",
+    "javascript"
   ],
   "author": "giantpaper",
   "license": "ISC",
