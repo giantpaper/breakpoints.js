@@ -42,13 +42,22 @@ export default class Breakpoints {
 	
 	lte(test) {
 		this.setValues();
+		if (this.n[test] === undefined) {
+			return false;
+		}
 		return this.w <= this.n[test] || this.is(test);
 	}
 	gte(test) {
+		if (this.n[test] === undefined) {
+			return false;
+		}
 		this.setValues();
 		return this.w >= this.n[test];
 	}
 	is(test) {
+		if (this.n[test] === undefined) {
+			return false;
+		}
 		this.setValues();
 		return this.b[test];
 	}
@@ -57,6 +66,9 @@ export default class Breakpoints {
 		return this.getKeyByValue(this.b, true);
 	}
 	between(test, test2) {
+		if (this.n[test] === undefined || this.n[test2] === undefined) {
+			return false;
+		}
 		this.setValues();
 		return this.n[test] <= this.w && this.w <= this.n[test2];
 	}
