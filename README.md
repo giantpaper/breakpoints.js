@@ -25,7 +25,7 @@ With unpkg
 ```
 import Breakpoints from './breakpoints.js';
 
-// List your breakpoints here. If left blank, default ones will be used.
+// List your breakpoints here. Name them whatever you want. If left blank, default ones will be used.
 // Just like Bootstrap, the first breakpoint must always be 0 otherwise it won't work as expected.
 	let breakpoints = new Breakpoints([
 		[	'xs',	0	],
@@ -48,6 +48,8 @@ breakpoints.gte('x4') // true if the current breakpoint is greater than or equal
 breakpoints.lte('x4') // true if the current breakpoint is lesser than or equal to x4
 
 breakpoints.between('md', 'x4') // true if the current breakpoint is between md and x4
+
+breakpoints.lte('notARealBreakpoint') // will return false if not registered as a breakpoint
 ```
 
 ## Important
