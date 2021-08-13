@@ -45,7 +45,7 @@ export default class Breakpoints {
 		if (this.n[test] === undefined) {
 			return false;
 		}
-		return this.w <= this.n[test] || this.is(test);
+		return this.w <= this.n[test] || this.b[test];
 	}
 	gte(test) {
 		if (this.n[test] === undefined) {
