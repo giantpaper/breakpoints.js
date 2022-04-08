@@ -48,17 +48,17 @@ export default class Breakpoints {
 		return this.w <= this.n[test] || this.b[test];
 	}
 	gte(test) {
+		this.setValues();
 		if (this.n[test] === undefined) {
 			return false;
 		}
-		this.setValues();
 		return this.w >= this.n[test];
 	}
 	is(test) {
+		this.setValues();
 		if (this.n[test] === undefined) {
 			return false;
 		}
-		this.setValues();
 		return this.b[test];
 	}
 	get() {
@@ -66,10 +66,10 @@ export default class Breakpoints {
 		return this.getKeyByValue(this.b, true);
 	}
 	between(test, test2) {
+		this.setValues();
 		if (this.n[test] === undefined || this.n[test2] === undefined) {
 			return false;
 		}
-		this.setValues();
 		return this.n[test] <= this.w && this.w <= this.n[test2];
 	}
 }
