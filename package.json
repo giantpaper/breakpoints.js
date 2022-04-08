@@ -19,5 +19,6 @@
   "bugs": {
     "url": "https://github.com/giantpaper/breakpoints.js/issues"
   },
-  "homepage": "https://github.com/giantpaper/breakpoints.js#readme"
+  "homepage": "https://github.com/giantpaper/breakpoints.js#readme",
+  "dependencies": {}
 }
