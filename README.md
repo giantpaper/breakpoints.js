@@ -14,6 +14,12 @@ With npm
 npm install @giantpaper/breakpoints.js
 ```
 
+With yarn
+
+```
+yarn add @giantpaper/breakpoints.js
+```
+
 With unpkg
 
 ```
