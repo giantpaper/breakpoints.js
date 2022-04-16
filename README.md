@@ -23,7 +23,7 @@ yarn add @giantpaper/breakpoints.js
 With unpkg
 
 ```
-<script type="text/javascript" src="https://unpkg.com/@giantpaper/breakpoints.js@2.0.0/breakpoints.min.js"></script>
+<script type="text/javascript" src="https://unpkg.com/@giantpaper/breakpoints.js/breakpoints.min.js"></script>
 ```
 
 ## Usage
