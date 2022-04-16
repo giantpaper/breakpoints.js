@@ -29,7 +29,7 @@ With unpkg
 ## Usage
 
 ```
-import Breakpoints from './breakpoints.js';
+import Breakpoints from '@giantpaper/breakpoints.js';
 
 // List your breakpoints here. Name them whatever you want. If left blank, default ones will be used.
 // Just like Bootstrap, the first breakpoint must always be 0 otherwise it won't work as expected.
@@ -64,7 +64,7 @@ breakpoints.js doesn't automatically update the breakpoint on window resize. So 
 
 (With Vanilla JS)
 ```
-import Breakpoints from './breakpoints.js';
+import Breakpoints from '@giantpaper/breakpoints.js';
 
 let breakpoints = new Breakpoints;
 
@@ -81,7 +81,7 @@ window.onresize = run;
 
 (With jQuery)
 ```
-import Breakpoints from './breakpoints.js';
+import Breakpoints from '@giantpaper/breakpoints.js';
 
 let breakpoints = new Breakpoints;
 
