@@ -32,7 +32,7 @@ With unpkg
 import Breakpoints from '@giantpaper/breakpoints.js';
 
 // List your breakpoints here. Name them whatever you want. If left blank, default ones will be used.
-// Just like Bootstrap, the first breakpoint must always be 0 otherwise it won't work as expected.
+// Just like Bootstrap, the first breakpoint must always be 0 otherwise it won't work as expected.  See Important heading below for more info.
 	let breakpoints = new Breakpoints([
 		[	'xs',	0	],
 		[	'sm',	480	],
@@ -95,4 +95,9 @@ var run = function() {
 $(window)
 	.on('load', run)
 	.on('resize', run);
+```
+
+**The "smallest breakpoint must be 0" rule:**
+
+The defined breakpoints are the minimum screen resolution at which the browser will start associating screen resolutions with their breakpoints. From the example below, "xs" devices will have a screen resolution of 0-479px, "sm" devices will have a screen resolution of "480-767px", etc. If you set the "xs" device to 320 for instance, there is no defined breakpoint for 0-319px displays, and the code will just error out.
 ```
