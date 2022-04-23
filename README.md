@@ -60,6 +60,8 @@ breakpoints.lte('notARealBreakpoint') // will return false if not registered as 
 
 ## Important
 
+**Have the breakpoints update .is(), .gte(), .lte(), etc values on window resize:**
+
 breakpoints.js doesn't automatically update the breakpoint on window resize. So if this is important to you, you might actually want to do something like this instead:
 
 (With Vanilla JS)
