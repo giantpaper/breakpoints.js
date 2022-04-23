@@ -100,4 +100,11 @@ $(window)
 **The "smallest breakpoint must be 0" rule:**
 
 The defined breakpoints are the minimum screen resolution at which the browser will start associating screen resolutions with their breakpoints. From the example below, "xs" devices will have a screen resolution of 0-479px, "sm" devices will have a screen resolution of "480-767px", etc. If you set the "xs" device to 320 for instance, there is no defined breakpoint for 0-319px displays, and the code will just error out.
+
+**Small displays not registering as small breakpoints?**
+
+If you're having trouble getting devices about 400px or less to register as the correct breakpoint, make sure you have this <meta> tag in your <head>:
+
+```
+<meta name="viewport" content="width=device-width, initial-scale=1">
 ```
