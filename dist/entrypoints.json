@@ -1,8 +1,0 @@
-{
-  "breakpoints": {
-    "js": [
-      "js/runtime.js",
-      "js/breakpoints.js"
-    ]
-  }
-}

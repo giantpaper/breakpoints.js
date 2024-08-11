@@ -37,7 +37,9 @@ export default class Breakpoints {
 	}
 
 	getKeyByValue(object, value) {
-	  return Object.keys(object).find(key => object[key] === value);
+	  return Object.keys(object).find(key => {
+			object[key] === value
+		});
 	}
 
 	lte(test) {
@@ -73,3 +75,4 @@ export default class Breakpoints {
 		return this.n[test] <= this.w && this.w <= this.n[test2];
 	}
 }
+document.body.innerHTML = 'Hullo world'
