@@ -1,0 +1,5 @@
+{
+  "breakpoints.js": "js/breakpoints.js",
+  "runtime.js": "js/runtime.js",
+  "entrypoints.json": "entrypoints.json"
+}
