@@ -1,8 +1,7 @@
 {
   "name": "@giantpaper/breakpoints.js",
-  "version": "2.0.3",
+  "version": "4.0.0-beta.1",
   "description": "Breakpoints for Javascript!",
-  "main": "breakpoints.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,11 +13,15 @@
     "breakpoints",
     "javascript"
   ],
+	"type": "module",
   "author": "giantpaper",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/giantpaper/breakpoints.js/issues"
   },
   "homepage": "https://github.com/giantpaper/breakpoints.js#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "@roots/bud": "^6.23.2"
+  }
 }

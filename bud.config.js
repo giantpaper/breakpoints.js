@@ -1,3 +1,3 @@
 import {bud} from '@roots/bud'
 
-bud.entry(['breakpoints.js',])
+bud.entry(['./breakpoints.js',])

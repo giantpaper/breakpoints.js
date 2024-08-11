@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+	<body>
+
+		<h1 id="log" style="text-align: center;"></h1>
+
+		<ul>
+			<li id="lte"></li>
+			<li id="gte"></li>
+			<li id="is"></li>
+		</ul>
+
+		<script type="module">
+			import Breakpoints from "https://cdn.skypack.dev/@giantpaper/breakpoints.js";
+
+			let breakpoints = new Breakpoints();
+
+			let run = () => {
+				document.getElementById('log').innerText = 'Current breakpoint: ' + breakpoints.get();
+				document.getElementById('lte').innerText = 'CURRENT BREAKPOINT <= x3 === ' + breakpoints.lte('x3');
+				document.getElementById('gte').innerText = 'CURRENT BREAKPOINT >= lg === ' + breakpoints.gte('lg');
+				document.getElementById('is').innerText = 'CURRENT BREAKPOINT === x3 === ' + breakpoints.is('x3');
+			};
+
+			window.onload = run;
+			window.onresize = run;
+
+		</script>
+	</body>
+</html>
