@@ -15,6 +15,10 @@
     "breakpoints",
     "javascript"
   ],
+  "sideEffects": [
+    "./src/index.js"
+  ],
+  "mode": "development",
   "author": "giantpaper",
   "license": "ISC",
   "bugs": {
