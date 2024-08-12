@@ -4,7 +4,7 @@
   "description": "Breakpoints for Javascript!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-		"build": "webpack"
+    "build": "webpack --env.production"
   },
 	"private": true,
   "repository": {
