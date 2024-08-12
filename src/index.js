@@ -75,4 +75,3 @@ export default class Breakpoints {
 		return this.n[test] <= this.w && this.w <= this.n[test2];
 	}
 }
-document.body.innerHTML = 'Hullo world'

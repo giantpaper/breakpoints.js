@@ -4,8 +4,9 @@
   "description": "Breakpoints for Javascript!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --env.production"
+    "build": "webpack --env production"
   },
+	"main": "./src/index.js",
   "private": true,
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
     "javascript"
   ],
   "sideEffects": [
-    "./src/index.js"
+    "src/index.js"
   ],
   "mode": "development",
   "author": "giantpaper",
