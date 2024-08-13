@@ -13,65 +13,63 @@ export default class Breakpoints {
 			[	'x4',	1920	],
 			[	'x5',	2560	],
 		];
-		this.b = {};
-		this.n = {};
-		this.w = 0;
+		this.brkptTests = {}
+		this.list = {}
+		this.winW = 0
 	}
 
 	setValues() {
-		this.w = window.innerWidth;
+		this.winW = window.innerWidth;
 		this.config.forEach((v, k, a) => {
-			let label = v[0];
-			let res = v[1];
-			let w = this.w;
+			let label = v[0]
+			let res = v[1]
+			let winW = this.winW
 			if (a[k+1] !== undefined) {
-				let next = a[k+1][1];
-				this.n[label] = res;
-				this.b[label] = res <= w && w < next;
+				let next = a[k+1][1]
+				this.list[label] = res
+				this.brkptTests[label] = res <= winW && winW < next
 			}
 			else {
-				this.n[label] = res;
-				this.b[label] = res <= w;
+				this.list[label] = res
+				this.brkptTests[label] = res <= winW
 			}
 		});
 	}
 
 	getKeyByValue(object, value) {
-	  return Object.keys(object).find(key => {
-			object[key] === value
-		});
+	  return Object.keys(object).find(key => object[key] === value)
 	}
 
 	lte(test) {
 		this.setValues();
-		if (this.n[test] === undefined) {
+		if (this.list[test] === undefined) {
 			return false;
 		}
-		return this.w <= this.n[test] || this.b[test];
+		return this.winW <= this.list[test] || this.brkptTests[test];
 	}
 	gte(test) {
 		this.setValues();
-		if (this.n[test] === undefined) {
+		if (this.list[test] === undefined) {
 			return false;
 		}
-		return this.w >= this.n[test];
+		return this.winW >= this.list[test];
 	}
 	is(test) {
 		this.setValues();
-		if (this.n[test] === undefined) {
+		if (this.list[test] === undefined) {
 			return false;
 		}
-		return this.b[test];
+		return this.brkptTests[test];
 	}
 	get() {
 		this.setValues();
-		return this.getKeyByValue(this.b, true);
+		return this.getKeyByValue(this.brkptTests, true);
 	}
 	between(test, test2) {
 		this.setValues();
-		if (this.n[test] === undefined || this.n[test2] === undefined) {
+		if (this.list[test] === undefined || this.list[test2] === undefined) {
 			return false;
 		}
-		return this.n[test] <= this.w && this.w <= this.n[test2];
+		return this.list[test] <= this.winW && this.winW <= this.list[test2];
 	}
 }

@@ -1,6 +1,5 @@
 const path = require('path');
 
-
 module.exports = env => {
 	let mode
 	if (env.development === true) {
@@ -16,6 +15,10 @@ module.exports = env => {
 		output: {
 			filename: 'breakpoints.js',
 			path: path.resolve(__dirname, 'dist'),
+			library: {
+				name: "Breakpoints",
+				type: "commonjs2"
+			}
 		},
 	}
 };
