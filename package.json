@@ -1,12 +1,13 @@
 {
   "name": "@giantpaper/breakpoints.js",
-  "version": "3.0.0-beta.0",
+  "version": "3.0.0-beta.3",
   "description": "Breakpoints for Javascript!",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "dev": "webpack --env development",
+    "build": "webpack --env production"
   },
-  "private": true,
+  "main": "./src/index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/giantpaper/breakpoints.js.git"
