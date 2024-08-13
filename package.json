@@ -25,6 +25,7 @@
   "homepage": "https://github.com/giantpaper/breakpoints.js#readme",
   "dependencies": {},
   "devDependencies": {
-    "@roots/bud": "^6.23.2"
+		"webpack": "^5.93.0",
+		"webpack-cli": "^5.1.4"
   }
 }
