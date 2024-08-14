@@ -17,7 +17,7 @@ module.exports = env => {
 			path: path.resolve(__dirname, 'dist'),
 			library: {
 				name: "Breakpoints",
-				type: "var"
+				type: "commonjs-static"
 			}
 		},
 	}

@@ -15,6 +15,22 @@
 			<li id="is"></li>
 		</ul>
 
-		<script type="text/javascript" src="demo.min.js?v=4.1"></script>
+		<!-- <script type="text/javascript" src="https://unpkg.com/@giantpaper/breakpoints.js@3.0.0-beta.0/js/breakpoints.js"></script> -->
+		<script type="module">
+			import Breakpoints from "https://cdn.skypack.dev/@giantpaper/breakpoints.js@3.0.0-beta.0/js/breakpoints.js";
+
+			let breakpoints = new Breakpoints();
+
+			let run = () => {
+				document.getElementById('log').innerText = 'Current breakpoint: ' + breakpoints.get();
+				document.getElementById('lte').innerText = 'CURRENT BREAKPOINT <= x3 === ' + breakpoints.lte('x3');
+				document.getElementById('gte').innerText = 'CURRENT BREAKPOINT >= lg === ' + breakpoints.gte('lg');
+				document.getElementById('is').innerText = 'CURRENT BREAKPOINT === x3 === ' + breakpoints.is('x3');
+			};
+
+			window.onload = run;
+			window.onresize = run;
+
+		</script>
 	</body>
 </html>
