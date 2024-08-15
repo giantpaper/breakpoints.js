@@ -1,15 +1,7 @@
 const path = require('path');
 
 module.exports = env => {
-	let mode
-	if (env.development === true) {
-		mode = 'development'
-	}
-	else {
-		mode = 'production'
-	}
-
-	return {
+	let config = {
 		entry: './src/index.js',
 		mode: mode,
 		output: {
@@ -17,8 +9,19 @@ module.exports = env => {
 			path: path.resolve(__dirname, 'dist'),
 			library: {
 				name: "Breakpoints",
-				type: "commonjs-static"
+				type: "umd",
 			}
 		},
 	}
+	let mode = env.development ? 'development' : 'production'
+
+	if (mode === 'development') {
+		config.devServer = {
+			port: 3000,
+			contentBase: __dirname + '/build',
+			inline: true
+		}
+	}
+
+	return config
 };
