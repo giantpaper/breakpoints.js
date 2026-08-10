@@ -43,6 +43,7 @@ export default class Breakpoints {
 	lte(test) {
 		this.setValues();
 		if (this.n[test] === undefined) {
+			console.warn(`Breakpoint label \`${test}\` not found.`);
 			return false;
 		}
 		return this.w <= this.n[test] || this.b[test];
@@ -50,6 +51,7 @@ export default class Breakpoints {
 	gte(test) {
 		this.setValues();
 		if (this.n[test] === undefined) {
+			console.warn(`Breakpoint label \`${test}\` not found.`);
 			return false;
 		}
 		return this.w >= this.n[test];
@@ -57,6 +59,7 @@ export default class Breakpoints {
 	is(test) {
 		this.setValues();
 		if (this.n[test] === undefined) {
+			console.warn(`Breakpoint label \`${test}\` not found.`);
 			return false;
 		}
 		return this.b[test];
@@ -68,6 +71,14 @@ export default class Breakpoints {
 	between(test, test2) {
 		this.setValues();
 		if (this.n[test] === undefined || this.n[test2] === undefined) {
+			if (this.n[test] === undefined && this.n[test2] === undefined) {
+				console.warn(`Breakpoint labels \`${test}\` && \`${test2}\` not found.`);
+			} else if (this.n[test] === undefined) {
+				console.warn(`Breakpoint label \`${test}\` not found.`);
+			}
+			else if (this.n[test] === undefined) {
+				console.warn(`Breakpoint label \`${test2}\` not found.`);
+			}
 			return false;
 		}
 		return this.n[test] <= this.w && this.w <= this.n[test2];
