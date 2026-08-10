@@ -1,6 +1,5 @@
 export default class Breakpoints {
 	constructor(config) {
-		
 		// If no custom breakpoints are set, use these defaults
 		this.config = config || [
 			[	'xs',	0	],
@@ -35,7 +34,6 @@ export default class Breakpoints {
 			}
 		});
 	}
-	
 	getKeyByValue(object, value) {
 	  return Object.keys(object).find(key => object[key] === value);
 	}
