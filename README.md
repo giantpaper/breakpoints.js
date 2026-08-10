@@ -6,6 +6,12 @@
 
 It's like Bootstrap's breakpoints...but for Javascript! Lightweight and smol. jQuery or any other external libraries are not required for this work.
 
+## Updates
+
+### Aug. 9, 2026
+
+Just an update to show everyone that this is NOT abandonware! I just tested this locally and all seems to be good for me, but always let me know if you run into any issues.
+
 ## Installation
 
 With npm
