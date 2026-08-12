@@ -17,7 +17,7 @@ export default class Breakpoints {
 		this.w = 0;
 		
 		// Define the lastWindowW now...which will be....nothing if the page just loaded
-		this.lastWindowW = null;
+		this.lastWindowW = 0;
 
 		// Debounce setValues and attach to resize
 		this.handleResize = this.debounce(this.setValues.bind(this), 100);
