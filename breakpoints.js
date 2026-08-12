@@ -15,22 +15,54 @@ export default class Breakpoints {
 		this.b = {};
 		this.n = {};
 		this.w = 0;
+		
+		// Define the lastWindowW now...which will be....nothing if the page just loaded
+		this.lastWindowW = null;
+
+		// Debounce setValues and attach to resize
+		this.handleResize = this.debounce(this.setValues.bind(this), 100);
+		window.addEventListener('resize', this.handleResize);
+	
+		// Initialize
+		this.setValues();
+	}
+	
+	// Debounce helper
+	debounce(func, delay) {
+		let timeout;
+		return function() {
+			const context = this;
+			const args = arguments;
+			clearTimeout(timeout);
+			timeout = setTimeout(() => {
+				func.apply(context, args);
+			}, delay);
+		};
 	}
 	
 	setValues() {
-		this.w = window.innerWidth;
+		// Get current window width
+		let currentWindowW = window.innerWidth;
+		// Stop if the window width hasn't changed
+		// So we're not redundantly recalculating the same values over and over again
+		if (this.lastWindowW === currentWindowW) {
+			return;
+		}
+		// If the window width changed, update this.w with the current width
+		this.w = currentWindowW;
+		// And this.lastWindowW with the current width also, which will become
+		// the previous width on next resize
+		this.lastWindowW = currentWindowW;
 		this.config.forEach((v, k, a) => {
 			let label = v[0];
 			let res = v[1];
-			let w = this.w;
 			if (a[k+1] !== undefined) {
 				let next = a[k+1][1];
 				this.n[label] = res;
-				this.b[label] = res <= w && w < next;
-			}
-			else {
+				this.b[label] = res <= currentWindowW && currentWindowW < next;
+			} else {
 				this.n[label] = res;
-				this.b[label] = res <= w;
+				this.b[label] = res <= currentWindowW;
 			}
 		});
 	}
@@ -80,5 +112,9 @@ export default class Breakpoints {
 			return false;
 		}
 		return this.n[test] <= this.w && this.w <= this.n[test2];
+	}
+	destroy() {
+		// Remove the resize event listener
+		window.removeEventListener('resize', this.handleResize);
 	}
 }
