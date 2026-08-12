@@ -105,8 +105,7 @@ export default class Breakpoints {
 				console.warn(`Breakpoint labels \`${test}\` && \`${test2}\` not found.`);
 			} else if (this.n[test] === undefined) {
 				console.warn(`Breakpoint label \`${test}\` not found.`);
-			}
-			else if (this.n[test] === undefined) {
+			} else if (this.n[test] === undefined) {
 				console.warn(`Breakpoint label \`${test2}\` not found.`);
 			}
 			return false;
