@@ -20,9 +20,6 @@ export default class Breakpoints {
 		this.n = {};
 		// Current window w -- set to 0 for now
 		this.w = 0;
-		
-		// Define the lastWindowW now...which will be....nothing if the page just loaded
-		this.lastWindowW = 0;
 
 		// Debounce setValues and attach to resize
 		this.handleResize = this.debounce(this.setValues.bind(this), 100);
@@ -55,14 +52,12 @@ export default class Breakpoints {
 		let currentWindowW = window.innerWidth;
 		// Stop if the window width hasn't changed
 		// So we're not redundantly recalculating the same values over and over again
-		if (this.lastWindowW === currentWindowW) {
+		// this.w = last recorded window width
+		if (this.w === currentWindowW) {
 			return;
 		}
 		// If the window width changed, update this.w with the current width
 		this.w = currentWindowW;
-		// And this.lastWindowW with the current width also, which will become
-		// the previous width on next resize
-		this.lastWindowW = currentWindowW;
 		// Go through the entire list of breakpoints
 		this.config.forEach((v, k, a) => {
 			// This breakpoint label
