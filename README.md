@@ -71,7 +71,7 @@ breakpoints.lte('notARealBreakpoint') // will return false if not registered as 
 breakpoints.js doesn't automatically update the breakpoint on window resize. So you might actually want to do something like this instead:
 
 (With Vanilla JS)
-```
+```js
 import Breakpoints from '@giantpaper/breakpoints.js';
 
 let breakpoints = new Breakpoints;
@@ -88,7 +88,7 @@ window.onresize = run;
 ```
 
 (With jQuery)
-```
+```js
 import Breakpoints from '@giantpaper/breakpoints.js';
 
 let breakpoints = new Breakpoints;
@@ -113,6 +113,6 @@ The defined breakpoints are the minimum screen resolution at which the browser w
 
 If you're having trouble getting devices about 400px or less to register as the correct breakpoint, make sure you have this <meta> tag in your <head>:
 
-```
+```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
