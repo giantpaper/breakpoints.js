@@ -8,6 +8,7 @@ let run = () => {
 	document.getElementById('lte').innerText = 'x3 <= ' + breakpoints.lte('x3');
 	document.getElementById('gte').innerText = 'lg >= ' + breakpoints.gte('lg');
 	document.getElementById('is').innerText = 'x3 === ' + breakpoints.is('x3');
+	document.getElementById('between').innerText = 'x2 <= [current breakpoint] <= x4 === ' + breakpoints.between('x2', 'x4');
 };
 
 window.onload = run;
