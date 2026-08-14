@@ -39,7 +39,6 @@ export default class Breakpoints {
 		// Define `timeout`
 		let timeout;
 		return function() {
-			// Takes `this` == puts in a variable `context`
 			const context = this;
 			// `arguments` shortened to `args`
 			const args = arguments;
