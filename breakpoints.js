@@ -39,14 +39,11 @@ export default class Breakpoints {
 		// Define `timeout`
 		let timeout;
 		return function() {
-			const context = this;
-			// `arguments` shortened to `args`
-			const args = arguments;
 			// Clear timeout
 			clearTimeout(timeout);
 			// Define timeout again, wait 100ms then run it
 			timeout = setTimeout(() => {
-				callback.apply(context, args);
+				callback.apply(this, arguments);
 			}, delay);
 		};
 	}
