@@ -29,7 +29,12 @@ export default class Breakpoints {
 		this.setValues();
 	}
 	
-	// Debounce helper
+	/**
+	 * Debounce helper
+	 * @param		{String}	func - callback function
+	 * @param		{Number}	delay - amount of time to pause between callbacks, in milliseconds
+	 * @return	void
+	 */
 	debounce(func, delay) {
 		// Define `timeout`
 		let timeout;
@@ -47,6 +52,12 @@ export default class Breakpoints {
 		};
 	}
 	
+	
+	/**
+	 * Set all the needed values so the below methods can detect breakpoints
+	 * @param none  -  n/a no parameters
+	 * @return void  - no return value
+	 */
 	setValues() {
 		// Get current window width
 		let currentWindowW = window.innerWidth;
@@ -83,10 +94,23 @@ export default class Breakpoints {
 			}
 		});
 	}
+	/**
+	 * Get a key from an object by value
+	 * @param {object} object - the object that needs to be searched
+	 * @param {string} value - the value you need the associated key of
+	 */
 	getKeyByValue(object, value) {
 	  return Object.keys(object).find(key => object[key] === value);
 	}
 	
+	/**
+	 * Check if the current window width is less than or equal to the given breakpoint
+	 * @param {string} test
+	 * 									the name of the breakpoint the user is checking (either 
+	 *									from the default list in the constructor or from the user's
+	 * 									custom list)
+	 * @return {boolean}
+	 */
 	lte(test) {
 		// All these redundant this.setValues() in this method and the below
 		// will only run if window width has changed
@@ -101,6 +125,14 @@ export default class Breakpoints {
 		// false = if this.w/window width is greater than the current breakpoint
 		return this.w <= this.n[test] || this.b[test];
 	}
+	/**
+	 * Check if the current window width is greater than or equal to the given breakpoint
+	 * @param {string} test
+	 * 									the name of the breakpoint the user is checking (either 
+	 *									from the default list in the constructor or from the user's
+	 * 									custom list)
+	 * @return {boolean}
+	 */
 	gte(test) {
 		this.setValues();
 		if (this.n[test] === undefined) {
@@ -111,6 +143,14 @@ export default class Breakpoints {
 		// false = if this.w/window width is lesser than the current breakpoint
 		return this.w >= this.n[test];
 	}
+	/**
+	 * Check if the current window width is equal to the given breakpoint
+	 * @param {string} test
+	 * 									the name of the breakpoint the user is checking (either 
+	 *									from the default list in the constructor or from the user's
+	 * 									custom list)
+	 * @return {boolean}
+	 */
 	is(test) {
 		this.setValues();
 		if (this.n[test] === undefined) {
@@ -121,11 +161,25 @@ export default class Breakpoints {
 		// false = if this.w/window width is not the current breakpoint
 		return this.b[test];
 	}
+	/**
+	 * Get the current breakpoint based on window width
+	 * @param none
+	 * @return {string} - the breakpoint label
+	 */
 	get() {
 		this.setValues();
 		// returns the string of current breakpoint label
 		return this.getKeyByValue(this.b, true);
 	}
+	/**
+	 * Check if the current window width is between two breakpoints or equal to one of them
+	 * @param {string} test
+	 * 									the name of the breakpoint the user is checking (either 
+	 *									from the default list in the constructor or from the user's
+	 * 									custom list)
+	 * @param {string} test2 - the name of the 2nd breakpoint to test
+	 * @return {boolean}
+	 */
 	between(test, test2) {
 		this.setValues();
 		if (this.n[test] === undefined || this.n[test2] === undefined) {
@@ -143,6 +197,12 @@ export default class Breakpoints {
 		// false = if this.w/window width is outside of the breakpoint range
 		return this.n[test] <= this.w && this.w <= this.n[test2];
 	}
+	/**
+	 * Completely remove any resize event listeners attached to the window
+	 * For SPAs, long lived applications, etc
+	 * @param none
+	 * @return void
+	 */
 	destroy() {
 		// Remove the resize event listener
 		window.removeEventListener('resize', this.handleResize);
