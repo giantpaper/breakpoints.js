@@ -31,11 +31,11 @@ export default class Breakpoints {
 	
 	/**
 	 * Debounce helper
-	 * @param		{String}	func - callback function
+	 * @param		{String}	callback - callback function
 	 * @param		{Number}	delay - amount of time to pause between callbacks, in milliseconds
 	 * @return	void
 	 */
-	debounce(func, delay) {
+	debounce(callback, delay) {
 		// Define `timeout`
 		let timeout;
 		return function() {
@@ -47,7 +47,7 @@ export default class Breakpoints {
 			clearTimeout(timeout);
 			// Define timeout again, wait 100ms then run it
 			timeout = setTimeout(() => {
-				func.apply(context, args);
+				callback.apply(context, args);
 			}, delay);
 		};
 	}
