@@ -1,7 +1,7 @@
 {
   "name": "@giantpaper/breakpoints.js",
   "version": "2.1.0",
-  "description": "Breakpoints for Javascript!",
+  "description": "Minimal, easy to use breakpoints for Javascript!",
   "main": "breakpoints.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
