@@ -1,8 +1,8 @@
 # breakpoints.js
 
 [![latest release on github](https://badgen.net/github/release/giantpaper/breakpoints.js)](https://github.com/giantpaper/breakpoints.js)
-[![v2.1.0 on npm](https://img.shields.io/badge/npm-v2.1.0-red)](https://www.npmjs.com/package/@giantpaper/breakpoints.js)
-[![v2.1.0 on unpkg](https://img.shields.io/badge/unpkg-v2.1.0-pink)](https://unpkg.com/@giantpaper/breakpoints.js@2.0.3/breakpoints.js)
+[![on npm](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fgiantpaper%2Fbreakpoints.js%2Fraw%2Fmaster%2Fpackage.json&query=%24.version&prefix=v&label=npm&color=red&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40giantpaper%2Fbreakpoints.js)](https://www.npmjs.com/package/@giantpaper/breakpoints.js)
+[![on unpkg](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fgithub.com%2Fgiantpaper%2Fbreakpoints.js%2Fraw%2Fmaster%2Fpackage.json&query=%24.version&prefix=v&label=unpkg&color=pink&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2F%40giantpaper%2Fbreakpoints.js)](https://unpkg.com/@giantpaper/breakpoints.js/breakpoints.js)
 
 It's like Bootstrap's breakpoints...but for Javascript! Lightweight and smol. jQuery or any other external libraries are not required for this work.
 
